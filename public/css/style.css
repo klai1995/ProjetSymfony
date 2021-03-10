@@ -1,0 +1,205 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+/*suivez-nous*/
+.fa {
+    width: 25px;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: white;
+    border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+}
+.fa-twitter {
+    background: #55ACEE;
+}
+.fa-linkedin {
+    background: #007bb5;
+}
+.fa-instagram {
+    background: #8a3ab9;
+}
+
+section {
+    background: white;
+    background-image: url(https://www.univ-larochelle.fr/wp-content/uploads/2018/02/la-recherche-a-luniversite-1600x640.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+}
+.blobs {
+    filter: url("#goo");
+    position:-ms-device-fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right: 0;
+}
+
+@-webkit-keyframes blob-left-top-anim {
+    0% {
+        transform: scale(1.1) translate(0, 0);
+    }
+    33% {
+        transform: scale(0.9) translate(-65px, 0);
+    }
+    62% {
+        transform: scale(0.7) translate(-65px, -65px);
+    }
+    94% {
+        transform: scale(1.1) translate(0, 0);
+    }
+}
+
+@keyframes blob-left-top-anim {
+    0% {
+        transform: scale(1.1) translate(0, 0);
+    }
+    33% {
+        transform: scale(0.9) translate(-65px, 0);
+    }
+    62% {
+        transform: scale(0.7) translate(-65px, -65px);
+    }
+    94% {
+        transform: scale(1.1) translate(0, 0);
+    }
+}
+@-webkit-keyframes blob-right-top-anim {
+    0% {
+        transform: scale(1.1) translate(0, 0);
+    }
+    33% {
+        transform: scale(0.9) translate(65px, 0);
+    }
+    64% {
+        transform: scale(0.7) translate(65px, -65px);
+    }
+    96% {
+        transform: scale(1.1) translate(0, 0);
+    }
+}
+@keyframes blob-right-top-anim {
+    0% {
+        transform: scale(1.1) translate(0, 0);
+    }
+    33% {
+        transform: scale(0.9) translate(65px, 0);
+    }
+    64% {
+        transform: scale(0.7) translate(65px, -65px);
+    }
+    96% {
+        transform: scale(1.1) translate(0, 0);
+    }
+}
+@-webkit-keyframes blob-left-bottom-anim {
+    0% {
+        transform: scale(1.1) translate(0, 0);
+    }
+    33% {
+        transform: scale(0.9) translate(-65px, 0);
+    }
+    66% {
+        transform: scale(0.7) translate(-65px, 65px);
+    }
+    98% {
+        transform: scale(1.1) translate(0, 0);
+    }
+}
+@keyframes blob-left-bottom-anim {
+    0% {
+        transform: scale(1.1) translate(0, 0);
+    }
+    33% {
+        transform: scale(0.9) translate(-65px, 0);
+    }
+    66% {
+        transform: scale(0.7) translate(-65px, 65px);
+    }
+    98% {
+        transform: scale(1.1) translate(0, 0);
+    }
+}
+@-webkit-keyframes blob-right-bottom-anim {
+    0% {
+        transform: scale(1.1) translate(0, 0);
+    }
+    33% {
+        transform: scale(0.9) translate(65px, 0);
+    }
+    68% {
+        transform: scale(0.7) translate(65px, 65px);
+    }
+    100% {
+        transform: scale(1.1) translate(0, 0);
+    }
+}
+@keyframes blob-right-bottom-anim {
+    0% {
+        transform: scale(1.1) translate(0, 0);
+    }
+    33% {
+        transform: scale(0.9) translate(65px, 0);
+    }
+    68% {
+        transform: scale(0.7) translate(65px, 65px);
+    }
+    100% {
+        transform: scale(1.1) translate(0, 0);
+    }
+}
+.blob {
+    position: fixed;
+    background: #3B5998;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    border-radius: 100%;
+    margin-top: -50px;
+    margin-left: -50px;
+    -webkit-animation: blob-left-top-anim cubic-bezier(0.77, 0, 0.175, 1) 4s infinite;
+    animation: blob-left-top-anim cubic-bezier(0.77, 0, 0.175, 1) 4s infinite;
+}
+.blob:nth-child(2) {
+    -webkit-animation-name: blob-right-top-anim;
+    animation-name: blob-right-top-anim;
+}
+.blob:nth-child(3) {
+    -webkit-animation-name: blob-left-bottom-anim;
+    animation-name: blob-left-bottom-anim;
+}
+.blob:nth-child(4) {
+    -webkit-animation-name: blob-right-bottom-anim;
+    animation-name: blob-right-bottom-anim;
+}
+.blob:nth-child(5) {
+    -webkit-animation-name: blob-right-bottom-anim;
+    animation-name: blob-right-bottom-anim;
+}

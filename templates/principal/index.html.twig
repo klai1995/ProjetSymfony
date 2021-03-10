@@ -1,0 +1,170 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+        {% block header %}
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAMAAADCMfHtAAAAe1BMVEUXbrD///8AZawAaK3u9fkAZqwAY6uQstQQbK8AX6k4e7YAYar3+vwAaq6vxNwveLXK1+hJiL0bc7O4zuPn7/bW4e1llsQuerYccbJ4ocpFgbmBpcu1y+HZ5fAAXalfkMCTtNSmwdvL3OtxnciRs9SFq89WjcCdu9hfk8KPDe2eAAANyUlEQVR4nO2da4OiLBTHFYQwpYtZ23Wmy1h9/0/4cA54y0adarZH1v+L3ckL8RM4HA5IjvsThfFk9LW5rseR0xUtndZ08XY1pAFhVEpHvDvf7dWWcJKMfUJFh8hStSKcLCSnHYRDNRN6+yWXXcVzmgnjFWHvzuNzqieMTwF9dw6fVS1h4neer5Zwtux4/dT6ljBcBO/O22v0HeFRWlBBUd8QfvnvztjLdJ/wSt6dr9fpHqE3tqWGgu4Q7qh8d65eqSrhjnTYRbujCuHOkk4i0y1h3NkxxHe6IQyXVrVB0A3h1CYrqlUmXFnhiZZVItzaZmVARcLYsn5Cq0i4ts7KgKKc8MLfnZlfUU4Y2zOcKCknPFtZRwuEMxvtKCgjjGy0o6CUcGunmXFyQmuLMCWcWVuEKeHQ2iI0hHNbDamTEp7sGzRlQsLQ3lZoCLcWhUcrQsKzvXZGE4YWjuxzAeHM5kqKhDZbUk3Y5XUIzVKE1kW5y1KEB6sNDRCurG6GQGix1w2KnNC6uZiyIie22Sl1gHBidX8PhJabUkU4sNuUKsKVpZHgVJFj9dDJAcL1u7Pwy4oceyOlWt15q+BRRc7y3Vn4ZfVl2H31hN1XT9h99YTdV0/YffWE3de/QGi7790Tdl89YffVE3ZfPWHnJXrCzqsn7L7eT0hp/UoJwQhO4Urz/0/VmlCKdvsLCaO2064y2e/XNSmL4WE0UInJ6Wi0eQSxLaGYns9tXm2T67PWNGq1r40YwwLemivJSK+z50f1/yNvZrUlXMJq8OYsCxpmr8J5o6j5mSPhqCZhlhJOfpkwgjw3Ly0SMidUWjQ+k64TNi8o+78TVoyPJlwtFotkDnfkq5Gql+p/DeG3Kd8n/MGuao8TCsqpVCa8ZH404VidoB9beM1BL86lnMmitReMM0o4TS2Nz6k6UkxZUKJfSr5DKDmhkvGWhvVhQsmSnaIJ56egcFQTYt0UUVpNRXA64qUrcykbjuLQ9eYrrgkPmzgM44PZ7ECQAaQcz4bsLiGfTjxIbdNuPd6jhOIza3CTwjcVCB2i8uGqrk6wY3rpHMuFbNLPR4aEJqlwiIjLOD2dkDuE/JKl1mpRpRg/Rsiy71FFkC/9K5YhNX+SbX4pvLoir9nHmSZMFcNybH+XH5jKCiE95adbvXD3KKFgsTtbrM8zOJ6nUCBkCKJsAt56Wa/xmYyFE0AZzT+H12NMhCacn4cruPEqHXGGA4P1FJ7LkVcIOdx9PA83oU6tFWGbsq62w/U5kEJ+wBfn3pQmXPpB4C/grx1xaKL+H/lS+ge8VPyB0vpQ93ImdDsMuRR8AbWBOQSuGgRSfkDdFuKWEDIS+1IQuD5pYW0eJnS054lVLq+mmtCLY9OWFlK7XVPwLKF0Lkwu8L/s+139Rgveqf5A7wyyhE9meEsozuZuwdz6jvR5QkeZe8JI5BZfDLvp8Uc8NxXGbDK6KpZ65pdis91xhwAhUfLhSaxvCfH5JD4h/MNr97LPw4SCJMfYy+3HHUJvA5ajQrj5nlCZGiT0QOG3hCGed3+ZMLfpVcLZFnt73Ye3IBzdEma6T5jpNwmxubjxbre7QxhxNBMH3pKwUoZxqvGtLUVCz5z1vn7T0kAhrQOlO4RDIddwPRrznPBP2zIMA8K1Kj0+Eq58c7qN46YI23Qqt4RoQvc8zXaF0AkgQ8dyO1xrQuiyk/oyNOeKDyi1pZ/qv6+frL3/ESGnRlJCNgfqi9Ay7m/6Q5UhMYQbVA/usL2rd2di+lLsNCbgf0kuq2XIoAlfIUEpAfGWEK4/on/KolaRkh8RrjZayZQCQEyCQILByXdFyX0aDt4ObAiDT92T2aWCQlInn/vneC0rhFjEXhRwf+rN/apfit7u5oMHdIu97GsJM+24jx3FEQeBhZduckLtjkEx+2h159ml6AK48TzGbZtuCZ0AU97BaVdZkltC9gWnvTlYOK/NuzCPEhat9rTgruZ+qXa4lxAlK18qhJd9HmI7LrZD7foYJVXP2+Hz7HTcLtbVilCIEiF4xFeTz926aNEoHNWeeIT1SZ2kazNciPVucMKZmM+f1NFdiKOr3xwKhQ5Nl7g7q48Uymzs6PYJlkvwi/YqwkurjbvalmEpbIBDVUmmyeWSrG8G+WKZXiuokMZ5JcPypWScHEaXs7I0EL7QI19111JHBASJToPBZsjxODVfLpfmtMPYNBkMrpS1C+C27A+zSC9KH5KUsTuhm/xh5H+Km0sFJcxkMLuoeKcsRMLTw4XU4HTbl5fblmF31RN2X10mFK0mi15MKF68BXFdemBuWkTbXktIo835le/csmEy/S49gkGw5n1nmgkZK8a1Zd1zQ0fnhduI4EDr8E16mrA5FtVIKC6Hw+EzRZSLQTL4/K7mcHRzXrc7IQ/d1AesShM294pNhNqpnKe+tY/u0jdPVY8a3Idmau+mp13FBT6xwPeDUkaRMGkxpfkAofddshz9z9e1a4z+6mIah0ql2XAycb1VuzjN6whFNHfj6+teDRfDnfLWZZaNU7H+y9WCviKK8SNC5ff7/JXdhUovkHk2FqW0ZTvP9FnCB2pkwy3i3gX3CNt+3TOEkgQ0WvL8p6AkIzgNShlhWQ2S2QdBOV9GLGB5TuFQIQlJfDkWWRBNmngaJRi7uwYQDDcjDcaJujFosVLA+fMoIZ/OsHuYD4znIc+z7XZAHZpst9t08ylxVh/Qvko60KGM7TpNT5AErdNuIEsp7iOwIXIxmUy+VHqbC0Y+jiql7UiH4MYHNEO7y7KhMT5OKDDWpBXqwTuOw10qdL9oxn9oEHcqATrNI/4HPV8toixyHjKVYmGmEcb92CGE3PRCqaCu8k3++VRvUB8nDCbFr8XVRBhTCalgh7zV6IiUcj10kDjViOBDyqcGPK5DMZlUc0RCjxcX6eh06aZ4oH6rsofbYTqTa6I18yz4qwh1MEm7jDhJBn2kmdsNDRR0AnSgk9h5kM00uKVn5uARpISkVIafQkjz3Tqt+i2EHibUIa8t8T90xoYiJ9QRQQ9vwgmOXWASCq8fAc6U4joUXYSJOjTdMzMnsw8C7p/n+CMUhlA15RVOIF9Wq9VGlRiFILO7G/s+PZoa8npCHTbELcBJkn5LRqirKbggug1B3BPzCE6I8CFboW+WkmEAG356CVvv8QOjTtrXTwnVZ6wxCwLxGcc8Cwh5CwLZmNTN5z9MiK1qz5y0pUFUNyPU1RTO6qoXmTall4vgTICr6trU0GshYem3CzJCk0zaH+KVelNZNE5x3YZzzxFiJ6CLaUYKhHkeMC4MW97pWbMPGJcz5P8j9KKEbC81gnV2GuS/I/kdIQvxWUBaBMKp3hsIdeRedc6ICoWJ7TGefoKwDMe3hMaUxtvBmXFRSwiJTs6Q1Bnaw66hlj7UWzQQ6syfqL4MGiQvze3eIyyss3Fna9JEWNA7CPXgdUbQvmAzqRBWaqnDD4XTK/I/J8T255EAOkFcWlIhdCqEDj8VFgesRWvC4/OE2UOCOW03Js2E8hNzif0BhiF0OxwPjdaq9VcIHcqn+4mhVAnWEs7ytGqDik2EOPvlemZhp57ZhUnAJkKB9m6/SiupIfSLUx9VQhiIcN/BrjPk9YRbfjuP8iCh9nr1qkGHoJs1aUGoczeHf3SwTPeHH6W07xCiPma6Gtf2h7VV8weExjs7+uifSGwAsIVdI6G2jLjqB/Ol3RwzgUjwx/l0GjmhjMwoDNe2ucsCIU6VZ5fqPNF0Kq5+XNxIqD1ndzJUY9uzbiKR04JQN1k36441cexwxgid4XjghlAs3fgKy38JPshSLdV+Uxyom1VXqT3ASUAYC8a7htCX+NNAaIKg4MibMcyItyIkZviYbsto0pldLnrFprgl1C11lGwuXsXSGCfdu+xn8dgs2XS97f6Cfn3tALGZUBSm4fFB4si2mTAdDKULJmhpvRZ0ITeE49J5XHubE5qBFkj5+KWe061fk9FM6LBzcQC605arSCjvEhob5WUGgSeFZI7LSi3FhTeZNqzY4xcXKExIXkHSh/UcoRraHNIuNl6lTi6EaM3DIzv1J6waol/KtGR1RtkWOJ5/PVmng/j4hN1PBCsQ8wJg0TZ9lrsprmK/qPSOOj0RpOuusdoHp3Sx9HHdEMVoQag6N7ZeDfaDxThfSSakGv6k/ZPqkvAETf/Qh53SRwidLT+T/X41TJMhpVkfZRcprH4YnMYm6grpZU+Iiev+clmN9QHKx4vBfr+ImgK0rQjhOkpZeXHA3SUJ5d73Tmcs6if9BK5+kNWE85Oi+LHFdGVbwu6qsT/svIDw3Xn4XfWE3dc/QTh8dx5+Vz1h9/VPEPaWpuPqCbsvNbboCTuunrD76gm7rycJBf0rema943OEYrof/AV9PfNjP88R0mIY+xc1f2J1fDcIjz1h5wnfWEs3egOH39YzP373ZG8hyV/RM8v/+x6/++oJuy9FaPlv5/WE3VdP2H31hN1XT9h99YTdV0/YffWEFqgn7L6GthOKtVP3+xkWSExtJ5QL6wk3thPSge2EbGQ7ITnaTsg92wmXruWEcmE7IdvaTuh7lhPC++J2E8JmVlYT4jvRVhMGW8sJ9bvUFhOa3dIsJvT1Dnf2EqYbAFhLGKzMqjhnaiehn23RYCchlfm+EjYSyuBU2MvDOkJBg0XhFwZtIxSUk03sujYSwjYZnAyT213TbCFcDqen5DDxKnhK/wE7+OzR7AyQVQAAAABJRU5ErkJggg==" alt="" width="70" height="70" class="d-inline-block align-top"> <br/>Rochellengues
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Photo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Inscription</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ asset('Footer') }}">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        {% endblock header %}
+
+
+
+    <main>
+        <section>
+                <div class="blobs">
+                    <div class="blob">M1</div>
+                    <div class="blob">L3</div>
+                    <div class="blob">L2</div>
+                    <div class="blob">L1</div>
+                </div>
+            <article class="py-5 text-center container" id="article">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="text-primary">Université La Rochelle</h1>
+                        <h3 class="text-primary">Association Rochellengues</h3>
+                        <p class="text-warning">La langue véhicule la richesse de la  culture d'un pays, l'apprendre, améliorer sa pratique et l'entretenir sont autant d'atouts pour une meilleure compréhension des traditions et des pratiques artistiques d'une civilisation <br/> Association Rochellengues a pour objectif de favoriser et promouvoir l'apprentissage des langues étrangères et communication entres les étudiants<br/>Les étudiants de université la Rochelle pole langue étranger ou les étudiant étranger qui assurent des cours particuliers pour tout public et gratuit , débutant ou confirmé. </p>
+                        <p>
+                            <a href="#" class="btn btn-primary my-2">Inscription</a>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Liza</h1>
+                <p>Bonjour <br/> je suis étudiante L3 informatique je cherche qulqu'un ou groupe pour apprendre la langue allmand, j'ai in bonne niveau en anglais </p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                <img src="{{ asset('public/image/') }}"   alt="image" width="70" height="70">
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Hello, world!</h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+
+            <hr>
+
+        </div> <!-- /container -->
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Hello, world!</h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </div>
+
+    </main>
+
+
+<footer>
+
+</footer>
+{% block Footer %}
+    <div class="jumbotron jumbotron-fluid bg-secondary p-4 mt-5 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+                    <div class="card bg-secondary border-0">
+                        <div class="card-body text-light text-center">
+                            <h5 class="card-title text-white display-4" style="font-size:30px">LA ROCHELLE UNIVERSITÉ</h5>
+                            <p class="d-inline lead">Technoforum | 23 avenue Albert Einstein | BP 33060 - 17031 La Rochelle - France<br>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+                    <div class="card bg-secondary border-0">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-white display-4" style="font-size:30px">Contact</h5>
+                            <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i class="fa fa-phone mr-2"></i>+33 (0)5 46 45 91 14</a>
+                            <a class="text-light d-block lead" href="#"><i class="fa fa-envelope mr-2"></i><span class="__cf_email__" data-cfemail="0667626b6f68466a6965676a6e6975722865696b">https://mail.univ-lr.fr</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                    <div class="card bg-secondary border-0">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-white display-4" style="font-size:30px">Suivez-nous!</h5>
+
+                            <a class="text-light" href="#"><i class="fa fa-facebook-square fa-fw fa-2x"></i></a>
+
+                            <a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
+
+                            <a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+
+                            <a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+{% endblock %}
+
+
+
+
+
+
