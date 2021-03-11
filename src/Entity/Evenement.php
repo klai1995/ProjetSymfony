@@ -37,12 +37,12 @@ class Evenement
      */
     private $date;
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getNom(): string
     {
         return $this->nom;
     }
@@ -54,7 +54,7 @@ class Evenement
         return $this;
     }
 
-    public function getLangue(): ?string
+    public function getLangue(): string
     {
         return $this->langue;
     }
@@ -66,7 +66,7 @@ class Evenement
         return $this;
     }
 
-    public function getPlace(): ?int
+    public function getPlace(): int
     {
         return $this->place;
     }
@@ -78,7 +78,7 @@ class Evenement
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDate(): \DateTimeInterface
     {
         return $this->date;
     }

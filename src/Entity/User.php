@@ -42,12 +42,12 @@ class User
      */
     private $password;
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getNom(): string
     {
         return $this->nom;
     }
@@ -59,7 +59,7 @@ class User
         return $this;
     }
 
-    public function getPrenom(): ?string
+    public function getPrenom(): string
     {
         return $this->prenom;
     }
@@ -71,7 +71,7 @@ class User
         return $this;
     }
 
-    public function getsexe(): ?bool
+    public function getsexe(): bool
     {
         return $this->sexe;
     }
@@ -83,7 +83,7 @@ class User
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -95,7 +95,7 @@ class User
         return $this;
     }
 
-    public function getPassword(): ?string
+    public function getPassword(): string
     {
         return $this->password;
     }
