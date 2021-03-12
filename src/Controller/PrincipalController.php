@@ -20,11 +20,11 @@ class PrincipalController extends AbstractController
         ]);
     }
     /**
-     * @Route("/Footer", name="footer")
+     * @Route("/contact", name="contact")
      */
-    public function contact(): Response
+    public function contacte(): Response
     {
-        return $this->render('principal/Footer.html.twig', [
+        return $this->render('principal/contact.html.twig', [
             'controller_name' => 'PrincipalController',
         ]);
     }
