@@ -57,15 +57,12 @@
                 </div>
             </article>
         </section>
-
-
-
         <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">Liza</h1>
                 <p>Bonjour <br/> je suis étudiante L3 informatique je cherche qulqu'un ou groupe pour apprendre la langue allmand, j'ai in bonne niveau en anglais </p>
                 <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-
+                <img src="{{ asset('public/image/') }}"   alt="image" width="70" height="70">
             </div>
         </div>
 
@@ -78,7 +75,7 @@
         </div>
 
         <div class="container">
-
+            <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-4">
                     <h2>Heading</h2>
@@ -98,21 +95,41 @@
             </div>
 
             <hr>
-
-        </div>
-
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-3">Hello, world!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label">Nom :</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Votre Nom "><br/>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleFormControlFile1">Image de la Langue</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary mb-3"></button>
+                    </div>
+                </div>
             </div>
-        </div>
+
+        </div> <!-- /container -->
+
+
+
+
+
+
 
     </main>
 
 
-{% block Footer id="2" %}
+<footer>
+
+</footer>
+{% block Footer %}
     <div class="jumbotron jumbotron-fluid bg-secondary p-4 mt-5 mb-0">
         <div class="container">
             <div class="row">
