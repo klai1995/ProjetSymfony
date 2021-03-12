@@ -7,18 +7,30 @@
            and uncomment the following Encore helpers to start using Symfony UX #}
         <!-- CSS only -->
 
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="ccs/inscription.css" rel="stylesheet" id="bootstrap-css">
+
+
         {% block stylesheets %}
             {#{{ encore_entry_link_tags('app') }}#}
-
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
             <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
             <meta name="apple-mobile-web-app-title" content="CodePen">
-
             <link rel="shortcut icon" type="image/x-icon" href="https://www.difcam.com/wp-content/uploads/2018/08/logo-universit%C3%A9-la-rochelle.png" />
-
             <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+            <!-- inscription-->
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <link href="css/inscription.css" rel="stylesheet" id="bootstrap-css">
         {% endblock %}
 
         {% block javascripts %}
